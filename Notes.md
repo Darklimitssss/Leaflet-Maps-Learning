@@ -1,4 +1,4 @@
-Here's an example showing different ways to handle coordinates in Leaflet:
+**Here's an example showing different ways to handle coordinates in Leaflet:**
 
 // Let's use your parking zone coordinates
 const geoJSONCoords = [-114.0730546, 51.0525571];  // [longitude, latitude]
@@ -43,7 +43,7 @@ function swapCoords(coords) {
 const newMarker = L.marker(swapCoords(geoJSONCoords)).addTo(map);
 
 
-Loading the Zones using Leaflet automatically.
+**Loading the Zones using Leaflet automatically.**
 
 Event-based loading:
 
@@ -64,33 +64,46 @@ map.on('moveend', function() {
 // Groups nearby markers into clusters
 const markers = L.markerClusterGroup();
 
-For a real-world app, I'd recommend combining Event-based loading with Clustering. Here's why:
-
-Event-based loading:
-Only loads data you need
-Reduces initial load time
-Saves bandwidth
-Better user experience
-More responsive app
-
-With Clustering:
-Prevents map cluttering
-Better performance with lots of markers
-Cleaner user interface
-Better mobile experience
-Easier to select zones when zoomed out
-
-This combination is what many production apps use (like property listing sites or store locators) because it:
-Loads efficiently (event-based)
-Displays efficiently (clustering)
-Works well on mobile
-Handles large datasets smoothly
-Gives the best user experience
-
 // MarkerCluster for clustering
 import 'leaflet.markercluster';
 
 // For better loading states
 import 'leaflet-loading';
 
+**AI** For a real-world app, I'd recommend combining Event-based loading with Clustering. Here's why:
+
+**Event-based loading:**
+
+Only loads data you need
+
+Reduces initial load time
+
+Saves bandwidth
+
+Better user experience
+
+More responsive app
+
+**With Clustering:**
+
+Prevents map cluttering
+
+Better performance with lots of markers
+
+Cleaner user interface
+
+Better mobile experience
+
+Easier to select zones when zoomed out
+
+**This combination is what many production apps use (like property listing sites or store locators) because it:**
+Loads efficiently (event-based)
+
+Displays efficiently (clustering)
+
+Works well on mobile
+
+Handles large datasets smoothly
+
+Gives the best user experience
 
